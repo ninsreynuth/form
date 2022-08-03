@@ -1,0 +1,40 @@
+<div class="content-body">
+  <mat-tab-group class="content-box">
+    <!-- signUp -->
+    <mat-tab label="signUp">
+      <form class="login row" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <table class="example-full-width row" cellspacing="0">
+          <!-- fistName -->
+          <mat-form-field class="firstName col-md-6" appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+          <!-- lastName -->
+          <mat-form-field class="lastName col-md-6" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+        </table>
+        <!-- email -->
+        <mat-form-field class="email" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+        <!-- password -->
+        <mat-form-field class="password password-mb" appearance="fill">
+          <mat-label>password</mat-label>
+          <input matInput formControlName="password">
+        </mat-form-field>
+        <!-- confirm password -->
+        <mat-form-field class="confirmPassword mt-0" appearance="fill">
+          <mat-label>confirm password</mat-label>
+          <input matInput formControlName="confirmPassword">
+        </mat-form-field>
+        <div class="btnLogin">
+          <button mat-raised-button type="submit" color="warn">SignUp</button>
+        </div>
+        <a routerLink="/login">Already register? please go to login!!</a>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+</div>
